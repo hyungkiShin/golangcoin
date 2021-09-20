@@ -2,12 +2,16 @@ package main
 
 import "fmt"
 
+type person struct {
+	contry string
+	age    int
+}
+
+func (p person) sayHello() {
+	fmt.Printf("Hello My contry is %s and Korean Age is %d", p.contry, p.age)
+}
+
 func main() {
-	foods := []string{"potato", "pizza", "pasta"}
-	fmt.Printf("%v\n", foods)
-
-	foodsNew := append(foods, "tomato") // 복사본에 할당
-	fmt.Printf("%v\n", foodsNew)
-
-	fmt.Println(len(foodsNew)) // 길이.
+	nico := person{contry: "korean", age: 29}
+	nico.sayHello()
 }

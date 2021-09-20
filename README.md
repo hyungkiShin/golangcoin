@@ -109,5 +109,47 @@ func main() {
 	fmt.Println(len(foodsNew)) // 길이.
 
 }
+
+pointer 
+--- 
+
+
+package main
+
+import "fmt"
+
+func main() {
+	a := 2
+	b := &a
+	fmt.Println(b, &a) // 메모리 주솟값을 보여주기.
+
+    a = 50
+	fmt.Println(*b) // 메모리 주솟값의 값을 보기
+}
+
+
+structor 구조체를 이용한 Printf
+---
+package main
+
+import "fmt"
+
+type person struct {
+	name string
+	age  int
+}
+
+func (p person) sayHello() {
+	fmt.Printf("Hello My name is %s and I'm %d", p.name, p.age)
+}
+
+func main() {
+	nico := person{name: "nico", age: 12}
+	nico.sayHello()
+}
+
+--- 
 ```
+
+
 
